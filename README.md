@@ -8,14 +8,14 @@
 [![Framework](https://img.shields.io/badge/framework-.NET-blue.svg)]()
 ## 前言
 在短视频平台上会经常刷到类似于背单词的视频，例如
- ![图片](video\image.png)
+ ![图片](video/image.png)
  
  但是其制作的单词过于简单，部分单词过于小众化，不能满足现在的学习需求，所以开发了这个软件
  用户可以输入单词，系统会自动搜索单词的释义、图片和音频，然后自动生成视频，并保存到本地。
 ### 生成效果：
-<video src="video\视频1.mp4" width="128" height="96" controls autoplay></video> 
+<video src="video/视频1.mp4" width="128" height="96" controls autoplay></video> 
 ### 程序界面：
- ![图片](video\image1.png)
+ ![图片](video/image1.png)
 ## 🌟 项目简介
 
 单词视频生成器是一款创新的英语学习工具，结合了阿里云最新的AI技术，为用户提供个性化的单词学习视频。本项目采用了以下先进技术栈：
