@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Version>1.0.0</Version>
+    <Authors>WordVideoGenerator</Authors>
+    <Company>WordVideoGenerator</Company>
+    <Product>单词视频生成器</Product>
+    <Description>一个简单的单词视频生成工具</Description>
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>true</SelfContained>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <PublishReadyToRun>true</PublishReadyToRun>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FFmpeg.AutoGen" Version="7.0.0" />
+    <PackageReference Include="FFMpegCore" Version="5.1.0" />
+    <PackageReference Include="NAudio" Version="2.2.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="SkiaSharp" Version="3.116.1" />
+  </ItemGroup>
+
+  <!-- 复制FFmpeg二进制文件到输出目录 -->
+  <ItemGroup>
+    <None Include="ffmpeg\bin\ffmpeg.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ffmpeg\bin\ffplay.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ffmpeg\bin\ffprobe.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <!-- 构建后事件：确保FFmpeg二进制文件在正确位置 -->
+  <Target Name="CopyFFmpegBinaries" AfterTargets="Build">
+    <ItemGroup>
+      <FFmpegBinaries Include="ffmpeg\bin\*.exe" />
+    </ItemGroup>
+    <MakeDir Directories="$(OutDir)ffmpeg\bin" />
+    <Copy SourceFiles="@(FFmpegBinaries)" DestinationFolder="$(OutDir)ffmpeg\bin" SkipUnchangedFiles="true" />
+    <Message Text="FFmpeg binaries copied to: $(OutDir)ffmpeg\bin" Importance="high" />
+  </Target>
+
+</Project>
