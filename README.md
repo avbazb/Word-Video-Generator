@@ -135,4 +135,4 @@ WordVideoGenerator/
 [![WanX](https://img.shields.io/badge/Image-wan2.2--t2i--flash-green.svg)]()
 
 </div>
-[![HitCount](https://hits.dwyl.com/avbazb/Word-Video-Generator.svg?style=flat-square)](http://hits.dwyl.com/avbazb/Word-Video-Generator)
+  [![HitCount](https://hits.dwyl.com/avbazb/Word-Video-Generator.svg?style=flat-square)](http://hits.dwyl.com/avbazb/Word-Video-Generator)
