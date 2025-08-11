@@ -128,11 +128,4 @@ WordVideoGenerator/
 
 ---
 
-<div align="center">
-
-[![阿里云](https://img.shields.io/badge/Powered%20by-阿里云-orange.svg)](https://www.aliyun.com/)
-[![Qwen](https://img.shields.io/badge/Model-qwen--flash-blue.svg)]()
-[![WanX](https://img.shields.io/badge/Image-wan2.2--t2i--flash-green.svg)]()
-
-</div>
- ![HitCount](https://hits.dwyl.com/avbazb/Word-Video-Generator.svg?style=flat-square)](http://hits.dwyl.com/avbazb/Word-Video-Generator)
+ [![HitCount](https://hits.dwyl.com/avbazb/Word-Video-Generator.svg?style=flat-square)](http://hits.dwyl.com/avbazb/Word-Video-Generator)
